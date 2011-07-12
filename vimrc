@@ -29,6 +29,8 @@ colorscheme molokai
 " With a map leader it's possible to do extra key combinations
 let mapleader = ","
 let g:mapleader = ","
+let g:sparkupNextMapping = '<c-x>'
+let g:DisableAutoPHPFolding = 1
 " Enter key to work like ESC
 " Use Shift-Enter or Ctrl-Enter for the new line
 ":inoremap <CR> <Esc>
@@ -150,8 +152,8 @@ map  <silent><A-left>  :tabp<CR>
 map <S-h> :tabp<CR>
 map <S-l> :tabn<CR>
 
-nnoremap :ntf :NERDTreeFind
-nnoremap <leader>, :NERDTreeFind
+nnoremap :ntf :NERDTreeFind<CR>
+nnoremap <leader>, :NERDTreeFind<CR>
 
 " Mappings to access buffers (don't use "\p" because a
 " delay before pressing "p" would accidentally paste).
@@ -329,7 +331,7 @@ au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
 set completeopt=menuone,menu,longest,preview
 
 """"" Folding
-set foldmethod=syntax					" By default, use syntax to determine folds
+"set foldmethod=syntax					" By default, use syntax to determine folds
 set foldlevelstart=99					" All folds open by default
 
 
