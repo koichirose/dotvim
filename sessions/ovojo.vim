@@ -1,5 +1,5 @@
 " ~/.vim/sessions/ovojo.vim: Vim session script.
-" Created by ~/.vim/bundle/sessions/autoload/session.vim on 12 July 2011 at 21:33:05.
+" Created by ~/.vim/bundle/sessions/autoload/session.vim on 13 July 2011 at 09:38:15.
 " Open this file in Vim and run :source % to restore your session.
 
 set guioptions=aegimrLtT
@@ -290,7 +290,7 @@ exe 'vert 2resize ' . ((&columns * 178 + 101) / 202)
 argglobal
 enew
 file NERD_tree_1
-setlocal fdm=manual
+setlocal fdm=syntax
 setlocal fde=0
 setlocal fmr={{{,}}}
 setlocal fdi=#
@@ -335,7 +335,7 @@ exe 'vert 2resize ' . ((&columns * 172 + 101) / 202)
 argglobal
 enew
 file ~/work/public_html/system/application/views/NERD_tree_2
-setlocal fdm=manual
+setlocal fdm=syntax
 setlocal fde=0
 setlocal fmr={{{,}}}
 setlocal fdi=#
@@ -355,14 +355,15 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 10 - ((9 * winheight(0) + 24) / 49)
+let s:l = 8 - ((7 * winheight(0) + 24) / 49)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-10
-normal! 06l
+8
+normal! 0
 lcd ~/work/public_html/system/application/views
 wincmd w
+2wincmd w
 exe 'vert 1resize ' . ((&columns * 29 + 101) / 202)
 exe 'vert 2resize ' . ((&columns * 172 + 101) / 202)
 tabedit ~/work/public_html/system/application/controllers/public/profile.php
@@ -384,7 +385,7 @@ exe 'vert 3resize ' . ((&columns * 84 + 101) / 202)
 argglobal
 enew
 file ~/work/public_html/system/application/controllers/public/NERD_tree_3
-setlocal fdm=manual
+setlocal fdm=syntax
 setlocal fde=0
 setlocal fmr={{{,}}}
 setlocal fdi=#
@@ -431,7 +432,7 @@ normal! zt
 normal! 077l
 lcd ~/work/public_html/system/application/controllers
 wincmd w
-3wincmd w
+2wincmd w
 exe 'vert 1resize ' . ((&columns * 31 + 101) / 202)
 exe 'vert 2resize ' . ((&columns * 85 + 101) / 202)
 exe 'vert 3resize ' . ((&columns * 84 + 101) / 202)
@@ -450,7 +451,7 @@ exe 'vert 2resize ' . ((&columns * 170 + 101) / 202)
 argglobal
 enew
 file ~/work/public_html/system/application/libraries/NERD_tree_4
-setlocal fdm=manual
+setlocal fdm=syntax
 setlocal fde=0
 setlocal fmr={{{,}}}
 setlocal fdi=#
@@ -478,7 +479,7 @@ normal! zt
 normal! 04l
 lcd ~/work/public_html/system/application/libraries
 wincmd w
-3wincmd w
+2wincmd w
 exe 'vert 1resize ' . ((&columns * 31 + 101) / 202)
 exe 'vert 2resize ' . ((&columns * 170 + 101) / 202)
 tabedit ~/work/public_html/system/application/models/m_profile.php
@@ -496,7 +497,7 @@ exe 'vert 2resize ' . ((&columns * 163 + 101) / 202)
 argglobal
 enew
 file ~/work/public_html/system/application/models/NERD_tree_5
-setlocal fdm=manual
+setlocal fdm=syntax
 setlocal fde=0
 setlocal fmr={{{,}}}
 setlocal fdi=#
@@ -524,7 +525,7 @@ normal! zt
 normal! 047l
 lcd ~/work/public_html/system/application/models
 wincmd w
-3wincmd w
+2wincmd w
 exe 'vert 1resize ' . ((&columns * 38 + 101) / 202)
 exe 'vert 2resize ' . ((&columns * 163 + 101) / 202)
 tabedit ~/work/public_html/scripts/light/my_profile_edit.js
@@ -542,7 +543,7 @@ exe 'vert 2resize ' . ((&columns * 170 + 101) / 202)
 argglobal
 enew
 file ~/work/public_html/scripts/light/NERD_tree_6
-setlocal fdm=manual
+setlocal fdm=syntax
 setlocal fde=0
 setlocal fmr={{{,}}}
 setlocal fdi=#
@@ -570,10 +571,10 @@ normal! zt
 normal! 02l
 lcd ~/work/public_html/scripts/light
 wincmd w
-3wincmd w
+2wincmd w
 exe 'vert 1resize ' . ((&columns * 31 + 101) / 202)
 exe 'vert 2resize ' . ((&columns * 170 + 101) / 202)
-tabnext 3
+tabnext 2
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf
 endif
@@ -616,7 +617,7 @@ tabnext 6
 bwipeout
 NERDTree ~/work/public_html/scripts/light
 1resize 49|vert 1resize 31|2resize 49|vert 2resize 170|
-tabnext 3
-3wincmd w
+tabnext 2
+2wincmd w
 
 " vim: ft=vim ro nowrap smc=128

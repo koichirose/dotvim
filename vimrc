@@ -15,8 +15,6 @@ set showmode
 filetype indent on
 filetype plugin on
 
-so ~/.vim/bundle/unicodemacros_0.1/unicodemacros.vim
-
 " Set to auto read when a file is changed from the outside
 set autoread
 
