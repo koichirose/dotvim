@@ -34,7 +34,7 @@ let g:DisableAutoPHPFolding = 1
 ":inoremap <CR> <Esc>
 
 " Fast saving
-nmap <leader>w :w!<cr>
+"nmap <leader>w :w!<cr>
 
 " Fast editing of the .vimrc
 map <leader>e :e $MYVIMRC<cr>
@@ -158,20 +158,20 @@ nnoremap <leader>, :NERDTreeFind<CR>
 " ,l       : list buffers
 " ,b ,f ,g : go back/forward/last-used
 " ,1 ,2 ,3 : go to buffer 1/2/3 etc
-nnoremap <Leader>l :ls<CR>
-nnoremap <Leader>b :bp<CR>
-nnoremap <Leader>f :bn<CR>
-nnoremap <Leader>g :e#<CR>
-nnoremap <Leader>1 :1b<CR>
-nnoremap <Leader>2 :2b<CR>
-nnoremap <Leader>3 :3b<CR>
-nnoremap <Leader>4 :4b<CR>
-nnoremap <Leader>5 :5b<CR>
-nnoremap <Leader>6 :6b<CR>
-nnoremap <Leader>7 :7b<CR>
-nnoremap <Leader>8 :8b<CR>
-nnoremap <Leader>9 :9b<CR>
-nnoremap <Leader>0 :10b<CR>
+"nnoremap <Leader>l :ls<CR>
+"nnoremap <Leader>b :bp<CR>
+"nnoremap <Leader>f :bn<CR>
+"nnoremap <Leader>g :e#<CR>
+"nnoremap <Leader>1 :1b<CR>
+"nnoremap <Leader>2 :2b<CR>
+"nnoremap <Leader>3 :3b<CR>
+"nnoremap <Leader>4 :4b<CR>
+"nnoremap <Leader>5 :5b<CR>
+"nnoremap <Leader>6 :6b<CR>
+"nnoremap <Leader>7 :7b<CR>
+"nnoremap <Leader>8 :8b<CR>
+"nnoremap <Leader>9 :9b<CR>
+"nnoremap <Leader>0 :10b<CR>
 
 " Close the current buffer. Bclose defined below.
 " dovrebbe già esistere in bufkill.vim
@@ -354,15 +354,10 @@ let Tlist_Exit_OnlyWindow = 1
 let Tlist_GainFocus_On_ToggleOpen = 1
 let Tlist_File_Fold_Auto_Close = 1
 
-
-" pydiction
-let g:pydiction_location = '/home/carlo/.vim/after/ftplugin/pydiction-1.2/complete-dict'
-
-
 """"" Autocommands
 
-autocmd BufRead *.py set makeprg=python\ -c\ \"import\ py_compile,sys;\ sys.stderr=sys.stdout;\ py_compile.compile(r'%')\"
-autocmd BufRead *.py set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m 
+"autocmd BufRead *.py set makeprg=python\ -c\ \"import\ py_compile,sys;\ sys.stderr=sys.stdout;\ py_compile.compile(r'%')\"
+"autocmd BufRead *.py set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m 
 
 "if has("autocmd")
 "augroup vimrcEx
