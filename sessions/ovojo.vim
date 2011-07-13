@@ -1,5 +1,5 @@
 " ~/.vim/sessions/ovojo.vim: Vim session script.
-" Created by ~/.vim/bundle/sessions/autoload/session.vim on 12 July 2011 at 20:46:37.
+" Created by ~/.vim/bundle/sessions/autoload/session.vim on 12 July 2011 at 21:33:05.
 " Open this file in Vim and run :source % to restore your session.
 
 set guioptions=aegimrLtT
@@ -404,7 +404,7 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 159 - ((15 * winheight(0) + 24) / 49)
+let s:l = 159 - ((6 * winheight(0) + 24) / 49)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -423,12 +423,12 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 29 - ((10 * winheight(0) + 24) / 49)
+let s:l = 24 - ((5 * winheight(0) + 24) / 49)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-29
-normal! 015l
+24
+normal! 077l
 lcd ~/work/public_html/system/application/controllers
 wincmd w
 3wincmd w
