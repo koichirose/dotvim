@@ -49,8 +49,8 @@ set title
 let g:tex_flavor='latex'
 
 " work more logically with wrapped lines
-noremap j gj
-noremap k gk
+"noremap j gj
+"noremap k gk
 
 nmap <tab> %
 vmap <tab> %
@@ -112,7 +112,6 @@ set t_vb=
 " Colors and fonts {{{1
 
 syntax enable "Enable syntax hl
-colorscheme mustang
 
 " }}}1
 
@@ -365,73 +364,7 @@ inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
 			\ "\"\\<lt>c-n>\\<lt>c-p>\\<lt>c-n>\" :" .
 			\ "\" \\<lt>bs>\\<lt>C-n>\"\<CR>"
 imap <C-@> <C-Space>
-"
-"" Toggle the tag list bar
-"nmap <F4> :TlistToggle<CR>
-"
 
-"" Ctrl + Arrows - Move around quickly
-"nnoremap  <c-up>     {
-"nnoremap  <c-down>   }
-""nnoremap  <c-right>  El
-"nnoremap  <c-down>   Bh
-"
-"" Shift + Arrows - Visually Select text
-"nnoremap  <s-up>     Vk
-"nnoremap  <s-down>   Vj
-"nnoremap  <s-right>  vl
-"nnoremap  <s-left>   vh
-"
-"if &diff
-"" easily handle diffing 
-"   vnoremap < :diffget<CR>
-"   vnoremap > :diffput<CR>
-"else
-"" visual shifting (builtin-repeat)
-"   vnoremap < <gv                       
-"   vnoremap > >gv 
-"endif
-"
-"" Extra functionality for some existing commands:
-"" <C-6> switches back to the alternate file and the correct column in the line.
-"nnoremap <C-6> <C-6>`"
-"
-"" CTRL-g shows filename and buffer number, too.
-"nnoremap <C-g> 2<C-g>
-"
-"" Arg!  I hate hitting q: instead of :q
-"nnoremap q: q:iq<esc>
-
-
-"" Q formats paragraphs, instead of entering ex mode
-"noremap Q gq
-"
-"" * and # search for next/previous of selected text when used in visual mode
-"vnoremap * y/<C-R>"<CR>
-"vnoremap # y?<C-R>"<CR>
-"
-"" <space> toggles folds opened and closed
-"nnoremap <space> za
-"
-"" <space> in visual mode creates a fold over the marked range
-"vnoremap <space> zf
-"
-"" allow arrow keys when code completion window is up
-"inoremap <Down> <C-R>=pumvisible() ? "\<lt>C-N>" : "\<lt>Down>"<CR>
-"
-"""" Abbreviations
-"function! EatChar(pat)
-"  let c = nr2char(getchar(0))
-"  return (c =~ a:pat) ? '' : c
-"endfunc
-"
-"iabbr _me John M. Anderson (sontek@gmail.com)<C-R>=EatChar('\s')<CR>
-"iabbr _t  <C-R>=strftime("%H:%M:%S")<CR><C-R>=EatChar('\s')<CR>
-"iabbr _d  <C-R>=strftime("%a, %d %b %Y")<CR><C-R>=EatChar('\s')<CR>
-"iabbr _dt <C-R>=strftime("%a, %d %b %Y %H:%M:%S %z")<CR><C-R>=EatChar('\s')<CR>
-"
-"
-"au BufNewFile,BufRead *.ck          setf ck
 
 au BufNewFile,BufRead *.yaml,*.yml so ~/.vim/yaml.vim
 
@@ -440,6 +373,7 @@ au BufNewFile,BufRead *.yaml,*.yml so ~/.vim/yaml.vim
 
 "custom koichirose
 
+finish
 if has("gui_running")
   " GUI is running or is about to start.
   " Maximize gvim window.
