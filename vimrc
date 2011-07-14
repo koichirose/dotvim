@@ -1,3 +1,4 @@
+set nocompatible "Don't be compatible with vi
 filetype off
 call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
@@ -6,14 +7,12 @@ call pathogen#runtime_append_all_bundles()
 
 "let processing_doc_patg="/home/ilsignorcarlo/processing-1.0/reference"
 "so ~/.scvimrc
-set nocompatible "Don't be compatible with vi
 
 set encoding=utf-8
 set showmode
 
 " Enable filetype plugin
-filetype indent on
-filetype plugin on
+filetype plugin indent on
 
 " Set to auto read when a file is changed from the outside
 set autoread
@@ -359,51 +358,6 @@ let Tlist_File_Fold_Auto_Close = 1
 "autocmd BufRead *.py set makeprg=python\ -c\ \"import\ py_compile,sys;\ sys.stderr=sys.stdout;\ py_compile.compile(r'%')\"
 "autocmd BufRead *.py set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m 
 
-"if has("autocmd")
-"augroup vimrcEx
-"au!
-"	" In plain-text files and svn commit buffers, wrap automatically at 78 chars
-"	au FileType text,svn setlocal tw=78 fo+=t
-"
-"	" In all files, try to jump back to the last spot cursor was in before exiting
-"	au BufReadPost *
-"		\ if line("'\"") > 0 && line("'\"") <= line("$") |
-"		\   exe "normal g`\"" |
-"		\ endif
-"
-"	" Use :make to check a script with perl
-"	au FileType perl set makeprg=perl\ -c\ %\ $* errorformat=%f:%l:%m
-"
-"	" Use :make to compile c, even without a makefile
-"	au FileType c if glob('Makefile') == "" | let &mp="gcc -o %< %" | endif
-"
-"	" Switch to the directory of the current file, unless it's a help file.
-"	au BufEnter * if &ft != 'help' | silent! cd %:p:h | endif
-"
-"	" Insert Vim-version as X-Editor in mail headers
-"	au FileType mail sil 1  | call search("^$")
-"				 \ | sil put! ='X-Editor: Vim-' . Version()
-"
-"	" smart indenting for python
-"	au FileType python set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
-"
-"	" allows us to run :make and get syntax errors for our python scripts
-"	au FileType python set makeprg=python\ -c\ \"import\ py_compile,sys;\ sys.stderr=sys.stdout;\ py_compile.compile(r'%')\"
-"	" setup file type for code snippets
-"	au FileType python if &ft !~ 'django' | setlocal filetype=python.django_tempate.django_model | endif
-"	au FileType python set expandtab
-"
-"	" kill calltip window if we move cursor or leave insert mode
-"	au CursorMovedI * if pumvisible() == 0|pclose|endif
-"	au InsertLeave * if pumvisible() == 0|pclose|endif
-"
-"	augroup END
-"endif
-"
-
-"map <silent><C-Left> <C-T>
-"map <silent><C-Right> <C-]>
-"
 "" bind ctrl+space for omnicompletion
 inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
 			\ "\<lt>C-n>" :
@@ -475,10 +429,6 @@ imap <C-@> <C-Space>
 "iabbr _t  <C-R>=strftime("%H:%M:%S")<CR><C-R>=EatChar('\s')<CR>
 "iabbr _d  <C-R>=strftime("%a, %d %b %Y")<CR><C-R>=EatChar('\s')<CR>
 "iabbr _dt <C-R>=strftime("%a, %d %b %Y %H:%M:%S %z")<CR><C-R>=EatChar('\s')<CR>
-"
-"
-"set nocp
-"
 "
 "
 "au BufNewFile,BufRead *.ck          setf ck
