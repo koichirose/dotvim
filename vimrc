@@ -17,7 +17,6 @@ filetype plugin indent on
 " Set to auto read when a file is changed from the outside
 set autoread
 
-set t_Co=256
 set background=dark						
 set number "Show line numbering
 set numberwidth=1 "Use 1 col + 1 space for numbers
@@ -39,7 +38,7 @@ let g:DisableAutoPHPFolding = 1
 map <leader>e :e $MYVIMRC<cr>
 
 " When .vimrc is edited, reload it
-autocmd! bufwritepost .vimrc source $MYVIMRC
+"autocmd! bufwritepost .vimrc source $MYVIMRC
 
 set title
 
@@ -49,8 +48,8 @@ set title
 let g:tex_flavor='latex'
 
 " work more logically with wrapped lines
-"noremap j gj
-"noremap k gk
+noremap j gj
+noremap k gk
 
 nmap <tab> %
 vmap <tab> %
@@ -118,15 +117,14 @@ syntax enable "Enable syntax hl
 
 " Text, tab and indent related {{{1
 
-set expandtab "Transform tabs into spaces
-set shiftwidth=4 "sw 4 spaces (used on auto indent)
 set tabstop=4 "4 spaces as a tab for bs/del
+set shiftwidth=4 "sw 4 spaces (used on auto indent)
 set softtabstop=4
 set smarttab
 
 set wrap linebreak tw=80 wm=0 "Wrap lines
-set ai "Auto indent
-set si "Smart indent
+set autoindent "Auto indent
+"set si "Smart indent
 " }}}1
 " Moving around, tabs and buffers {{{1
 
