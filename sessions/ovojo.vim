@@ -1,5 +1,5 @@
 " ~/.vim/sessions/ovojo.vim: Vim session script.
-" Created by ~/.vim/bundle/sessions/autoload/session.vim on 14 July 2011 at 21:45:25.
+" Created by ~/.vim/bundle/sessions/autoload/session.vim on 15 July 2011 at 15:45:43.
 " Open this file in Vim and run :source % to restore your session.
 
 set guioptions=aegimrLtT
@@ -80,7 +80,7 @@ badd +18 work/public_html/system/application/views/light/public/v_footer.php
 badd +74 work/public_html/forum/styles/nexus/template/overall_footer.html
 badd +1 work/public_html/css/light/default.css
 badd +35 work/public_html/system/application/views/light/public/v_stores_list.php
-badd +19 work/public_html/system/application/views/light/v_login.php
+badd +10 work/public_html/system/application/views/light/v_login.php
 badd +1 work/public_html/system/application/controllers/public/stores_list.php
 badd +9 work/public_html/system/application/views/light/public/v_big_map_controls.php
 badd +91 work/public_html/system/application/views/light/public/v_help.php
@@ -177,7 +177,7 @@ badd +1 work/public_html/css/light/my_profile.css
 badd +7 work/public_html/system/application/models/m_profile.php
 badd +182 work/public_html/css/light/my_insert_purchase.css
 badd +146 work/public_html/css/light/admin/admin_default.css
-badd +129 .vimrc
+badd +126 .vimrc
 badd +1 work/public_html/scripts/light/my_profile.js
 badd +34 work/public_html/system/application/controllers/login.php
 badd +1 work/public_html/system/application/libraries/MY_Input.php
@@ -242,10 +242,10 @@ badd +76 work/public_html/system/application/controllers/public/product.php
 badd +31 work/public_html/system/application/models/m_prodotto.php
 badd +1 work/public_html/system/application/models/m_feed_prodotto.php
 badd +4 work/public_html/system/application/views/light/public/v_product_list.php
-badd +12 work/public_html/system/application/views/light/public/v_product_list_products.php
+badd +10 work/public_html/system/application/views/light/public/v_product_list_products.php
 badd +1 work/public_html/system/application/views/light/public/v_col_sx_products_filters.php
 badd +1 work/public_html/scripts/light/my_product_list.js
-badd +1 work/public_html/system/application/views/light/public/v_col_sx_products.php
+badd +31 work/public_html/system/application/views/light/public/v_col_sx_products.php
 badd +470 work/public_html/css/light/my_product_list.css
 badd +35 work/public_html/scripts/light/my_ga.js
 badd +56 work/public_html/system/application/helpers/notifications_helper.php
@@ -269,19 +269,21 @@ badd +24 work/public_html/system/application/controllers/register.php
 badd +9 work/public_html/system/application/views/light/admin/v_brand_menu.php
 badd +11 work/public_html/system/application/views/light/admin/v_brand_search_brand.php
 badd +16 work/public_html/scripts/light/my_register.js
-badd +8 work/public_html/system/application/views/light/v_recover_password.php
+badd +11 work/public_html/system/application/views/light/v_recover_password.php
 badd +20 work/public_html/system/application/views/light/public/email/v_recover_password.php
 badd +1 work/public_html/system/application/views/light/public/email/v_notify_loved_purchase.php
 badd +8 work/public_html/system/application/views/index.html
 badd +1 helpers/rating_helper.php
 badd +1 work/public_html/system/application/views/light/public/v_search_results.php
 badd +1 work/public_html/system/application/views/light/admin/v_footer.php
-badd +1 work/public_html/.gitignore
+badd +9 work/public_html/.gitignore
 badd +1 work/public_html/system/application/config/.giti
 badd +14 work/public_html/scripts/light/admin/my_admin_brands_sold.js
+badd +1 work/public_html/tools/import_zanox.sh
+badd +3 work/public_html/system/application/index.html
 silent! argdel *
-set lines=52 columns=202
-edit work/public_html/.gitignore
+set lines=52 columns=204
+edit work/public_html/tools/import_zanox.sh
 set splitbelow splitright
 wincmd _ | wincmd |
 vsplit
@@ -291,8 +293,8 @@ set nosplitbelow
 set nosplitright
 wincmd t
 set winheight=1 winwidth=1
-exe 'vert 1resize ' . ((&columns * 21 + 101) / 202)
-exe 'vert 2resize ' . ((&columns * 180 + 101) / 202)
+exe 'vert 1resize ' . ((&columns * 23 + 102) / 204)
+exe 'vert 2resize ' . ((&columns * 180 + 102) / 204)
 argglobal
 enew
 file NERD_tree_1
@@ -304,9 +306,10 @@ setlocal fdl=99
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
+lcd ~/work/public_html/tools
 wincmd w
 argglobal
-setlocal fdm=syntax
+setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
 setlocal fdi=#
@@ -314,63 +317,17 @@ setlocal fdl=99
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 9 - ((8 * winheight(0) + 24) / 49)
+silent! normal! zE
+let s:l = 118 - ((8 * winheight(0) + 24) / 49)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-9
-normal! 08l
+118
+normal! 0267l
+lcd ~/work/public_html/tools
 wincmd w
-exe 'vert 1resize ' . ((&columns * 21 + 101) / 202)
-exe 'vert 2resize ' . ((&columns * 180 + 101) / 202)
-tabedit work/public_html/system/application/controllers/admin/upload.php
-set splitbelow splitright
-wincmd _ | wincmd |
-vsplit
-1wincmd h
-wincmd w
-set nosplitbelow
-set nosplitright
-wincmd t
-set winheight=1 winwidth=1
-exe 'vert 1resize ' . ((&columns * 27 + 101) / 202)
-exe 'vert 2resize ' . ((&columns * 174 + 101) / 202)
-argglobal
-enew
-file NERD_tree_2
-setlocal fdm=syntax
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=99
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-lcd ~/work/public_html/system/application/views
-wincmd w
-argglobal
-setlocal fdm=syntax
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=99
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-11
-normal zo
-18
-normal zo
-let s:l = 19 - ((18 * winheight(0) + 24) / 49)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-19
-normal! 01l
-lcd ~/work/public_html/system/application/views
-wincmd w
-exe 'vert 1resize ' . ((&columns * 27 + 101) / 202)
-exe 'vert 2resize ' . ((&columns * 174 + 101) / 202)
+exe 'vert 1resize ' . ((&columns * 23 + 102) / 204)
+exe 'vert 2resize ' . ((&columns * 180 + 102) / 204)
 tabedit ~/work/public_html/system/application/models/m_feed_prodotto.php
 set splitbelow splitright
 set nosplitbelow
@@ -386,83 +343,13 @@ setlocal fdl=99
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-6
-normal zo
-let s:l = 21 - ((7 * winheight(0) + 24) / 49)
+let s:l = 7 - ((6 * winheight(0) + 24) / 49)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-21
-normal! 09l
-lcd ~/work/public_html/system/application/views
-tabedit ~/work/public_html/system/application/views/light/public/v_col_sx_products.php
-set splitbelow splitright
-wincmd _ | wincmd |
-vsplit
-wincmd _ | wincmd |
-vsplit
-2wincmd h
-wincmd w
-wincmd w
-set nosplitbelow
-set nosplitright
-wincmd t
-set winheight=1 winwidth=1
-exe 'vert 1resize ' . ((&columns * 31 + 101) / 202)
-exe 'vert 2resize ' . ((&columns * 85 + 101) / 202)
-exe 'vert 3resize ' . ((&columns * 84 + 101) / 202)
-argglobal
-enew
-file ~/work/public_html/system/application/views/NERD_tree_3
-setlocal fdm=syntax
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=99
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-lcd ~/work/public_html/system/application/views
-wincmd w
-argglobal
-setlocal fdm=syntax
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=99
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-let s:l = 32 - ((16 * winheight(0) + 24) / 49)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-32
-normal! 040l
-lcd ~/work/public_html/system/application/views
-wincmd w
-argglobal
-edit ~/work/public_html/system/application/views/light/public/v_product_list_products.php
-setlocal fdm=syntax
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=99
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-let s:l = 11 - ((10 * winheight(0) + 24) / 49)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-11
-normal! 086l
-lcd ~/work/public_html/system/application/views
-wincmd w
-2wincmd w
-exe 'vert 1resize ' . ((&columns * 31 + 101) / 202)
-exe 'vert 2resize ' . ((&columns * 85 + 101) / 202)
-exe 'vert 3resize ' . ((&columns * 84 + 101) / 202)
+7
+normal! 04l
+lcd ~/work/public_html/system/application/models
 tabedit ~/work/public_html/scripts/light/my_product_list.js
 set splitbelow splitright
 wincmd _ | wincmd |
@@ -473,12 +360,12 @@ set nosplitbelow
 set nosplitright
 wincmd t
 set winheight=1 winwidth=1
-exe 'vert 1resize ' . ((&columns * 31 + 101) / 202)
-exe 'vert 2resize ' . ((&columns * 170 + 101) / 202)
+exe 'vert 1resize ' . ((&columns * 39 + 102) / 204)
+exe 'vert 2resize ' . ((&columns * 164 + 102) / 204)
 argglobal
 enew
-file ~/work/public_html/scripts/light/NERD_tree_4
-setlocal fdm=syntax
+file ~/work/public_html/scripts/light/NERD_tree_3
+setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
 setlocal fdi=#
@@ -505,9 +392,8 @@ normal! zt
 normal! 028l
 lcd ~/work/public_html/scripts/light
 wincmd w
-2wincmd w
-exe 'vert 1resize ' . ((&columns * 31 + 101) / 202)
-exe 'vert 2resize ' . ((&columns * 170 + 101) / 202)
+exe 'vert 1resize ' . ((&columns * 39 + 102) / 204)
+exe 'vert 2resize ' . ((&columns * 164 + 102) / 204)
 tabedit ~/work/public_html/css/light/default.css
 set splitbelow splitright
 wincmd _ | wincmd |
@@ -518,12 +404,12 @@ set nosplitbelow
 set nosplitright
 wincmd t
 set winheight=1 winwidth=1
-exe 'vert 1resize ' . ((&columns * 31 + 101) / 202)
-exe 'vert 2resize ' . ((&columns * 170 + 101) / 202)
+exe 'vert 1resize ' . ((&columns * 39 + 102) / 204)
+exe 'vert 2resize ' . ((&columns * 164 + 102) / 204)
 argglobal
 enew
-file ~/work/public_html/scripts/light/NERD_tree_5
-setlocal fdm=syntax
+file ~/work/public_html/css/light/NERD_tree_4
+setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
 setlocal fdi=#
@@ -531,7 +417,7 @@ setlocal fdl=99
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-lcd ~/work/public_html/scripts/light
+lcd ~/work/public_html/css/light
 wincmd w
 argglobal
 setlocal fdm=syntax
@@ -548,12 +434,11 @@ exe s:l
 normal! zt
 1402
 normal! 0
-lcd ~/work/public_html/scripts/light
+lcd ~/work/public_html/css/light
 wincmd w
-2wincmd w
-exe 'vert 1resize ' . ((&columns * 31 + 101) / 202)
-exe 'vert 2resize ' . ((&columns * 170 + 101) / 202)
-tabnext 4
+exe 'vert 1resize ' . ((&columns * 39 + 102) / 204)
+exe 'vert 2resize ' . ((&columns * 164 + 102) / 204)
+tabnext 3
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf
 endif
@@ -570,28 +455,18 @@ tabnext 1
 1wincmd w
 bwipeout
 NERDTree ~/work
-1resize 49|vert 1resize 21|2resize 49|vert 2resize 180|
-tabnext 2
-1wincmd w
-bwipeout
-NERDTree ~/work/public_html/system
-1resize 49|vert 1resize 27|2resize 49|vert 2resize 174|
-tabnext 4
-1wincmd w
-bwipeout
-NERDTree ~/work/public_html/system/application
-1resize 49|vert 1resize 31|2resize 49|vert 2resize 85|3resize 49|vert 3resize 82|
-tabnext 5
+1resize 49|vert 1resize 23|2resize 49|vert 2resize 180|
+tabnext 3
 1wincmd w
 bwipeout
 NERDTree ~/work/public_html/scripts/light
-1resize 49|vert 1resize 31|2resize 49|vert 2resize 168|
-tabnext 6
+1resize 49|vert 1resize 39|2resize 49|vert 2resize 164|
+tabnext 4
 1wincmd w
 bwipeout
 NERDTree ~/work/public_html
-1resize 49|vert 1resize 31|2resize 49|vert 2resize 168|
-tabnext 4
-2wincmd w
+1resize 49|vert 1resize 39|2resize 49|vert 2resize 164|
+tabnext 3
+1wincmd w
 
 " vim: ft=vim ro nowrap smc=128

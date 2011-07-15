@@ -18,7 +18,7 @@
 	url = https://github.com/msanders/snipmate.vim.git
 [submodule "bundle/matchit"]
 	path = bundle/matchit
-	url = https://github.com/vim-scripts/matchit.zip.git
+	url = https://github.com/mhz/vim-matchit.git
 [submodule "bundle/surround"]
 	path = bundle/surround
 	url = https://github.com/tpope/vim-surround.git
@@ -34,3 +34,9 @@
 [submodule "bundle/css_color"]
 	path = bundle/css_color
 	url = https://github.com/vim-scripts/css_color.vim.git
+[submodule "bundle/AutoClose"]
+	path = bundle/AutoClose
+	url = https://github.com/vim-scripts/AutoClose.git
+[submodule "bundle/Sparkup"]
+	path = bundle/Sparkup
+	url = https://github.com/kogakure/vim-sparkup.git

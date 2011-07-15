@@ -122,9 +122,8 @@ set shiftwidth=4 "sw 4 spaces (used on auto indent)
 set softtabstop=4
 set smarttab
 
-set wrap linebreak tw=80 wm=0 "Wrap lines
 set autoindent "Auto indent
-"set si "Smart indent
+set si "Smart indent
 " }}}1
 " Moving around, tabs and buffers {{{1
 
@@ -149,30 +148,6 @@ map <S-l> :tabn<CR>
 nnoremap :ntf :NERDTreeFind<CR>
 nnoremap <leader>, :NERDTreeFind<CR>
 
-" Mappings to access buffers (don't use "\p" because a
-" delay before pressing "p" would accidentally paste).
-" ,l       : list buffers
-" ,b ,f ,g : go back/forward/last-used
-" ,1 ,2 ,3 : go to buffer 1/2/3 etc
-"nnoremap <Leader>l :ls<CR>
-"nnoremap <Leader>b :bp<CR>
-"nnoremap <Leader>f :bn<CR>
-"nnoremap <Leader>g :e#<CR>
-"nnoremap <Leader>1 :1b<CR>
-"nnoremap <Leader>2 :2b<CR>
-"nnoremap <Leader>3 :3b<CR>
-"nnoremap <Leader>4 :4b<CR>
-"nnoremap <Leader>5 :5b<CR>
-"nnoremap <Leader>6 :6b<CR>
-"nnoremap <Leader>7 :7b<CR>
-"nnoremap <Leader>8 :8b<CR>
-"nnoremap <Leader>9 :9b<CR>
-"nnoremap <Leader>0 :10b<CR>
-
-" Close the current buffer. Bclose defined below.
-" dovrebbe già esistere in bufkill.vim
-" map <leader>bd :Bclose<cr>
-
 " Use the arrows to do something useful
 map <right> :bn<cr>
 map <left> :bp<cr>
@@ -185,30 +160,9 @@ let g:miniBufExplUseSingleClick = 1
 let g:miniBufExplMapWindowNavVim = 1
 
 " Change directory to the file I'm editing
-"autocmd BufEnter * lcd %:p:h
+autocmd BufEnter * lcd %:p:h
 " When pressing <leader>cd switch to the directory of the open buffer
 map <leader>cd :cd %:p:h<cr>
-
-" Function to close buffer?
-command! Bclose call <SID>BufcloseCloseIt()
-function! <SID>BufcloseCloseIt()
-   let l:currentBufNum = bufnr("%")
-   let l:alternateBufNum = bufnr("#")
-
-   if buflisted(l:alternateBufNum)
-     buffer #
-   else
-     bnext
-   endif
-
-   if bufnr("%") == l:currentBufNum
-     new
-   endif
-
-   if buflisted(l:currentBufNum)
-     execute("bdelete! ".l:currentBufNum)
-   endif
-endfunction
 
 " Specify the behavior when switching between buffers
 try
@@ -219,10 +173,6 @@ endtry
 
 nnoremap <C-e> 3<C-e>
 nnoremap <C-y> 3<C-y>
-
-" }}} 1
-
-" Statusline {{{1
 
 " Always hide the statusline
 set laststatus=2
@@ -235,40 +185,6 @@ function! CurDir()
     let curdir = substitute(getcwd(), '/Users/amir/', "~/", "g")
     return curdir
 endfunction
-
-" }}} 1
-
-" Parenthesis/bracket expanding {{{1
-vnoremap $1 <esc>`>a)<esc>`<i(<esc>
-vnoremap $2 <esc>`>a]<esc>`<i[<esc>
-vnoremap $3 <esc>`>a}<esc>`<i{<esc>
-vnoremap $$ <esc>`>a"<esc>`<i"<esc>
-vnoremap $q <esc>`>a'<esc>`<i'<esc>
-vnoremap $e <esc>`>a"<esc>`<i"<esc>
-
-" Map auto complete of (, ", ', [
-inoremap $1 ()<esc>i
-inoremap $2 []<esc>i
-inoremap $3 {}<esc>i
-inoremap $4 {<esc>o}<esc>O
-inoremap $q ''<esc>i
-inoremap $e ""<esc>i
-
-" }}} 1
-
-
-" Statusline {{{1
-
-
-" }}} 1
-" Statusline {{{1
-
-
-" }}} 1
-" Statusline {{{1
-
-
-" }}} 1
 
 " IMPORTANT: grep will sometimes skip displaying the file name if you
 " " search in a singe file. This will confuse latex-suite. Set your grep
@@ -305,12 +221,6 @@ set tags=tags;/
 "set tags+=$HOME/.vim/tags/python.ctags
 "set tags+=$HOME/workspace/ia/m_ia/tags
 
-" taglist plugin settings
-nnoremap <silent> <F8> :TlistToggle<CR>
-let Tlist_Exit_OnlyWindow = 1 "exit if taglist is last window open
-let Tlist_Show_One_File = 1 "only show tags for current buffer
-let Tlist_Enable_Fold_Column = 0  "no fold column (only showing one file)
-
 " OmniCppComplete
 let OmniCpp_NamespaceSearch = 1
 let OmniCpp_GlobalScopeSearch = 1
@@ -332,29 +242,6 @@ set foldlevelstart=99					" All folds open by default
 """" Command Line
 set wildmode=list:longest " stesso di prima, più simile a shell
 
-
-" Taglist variables
-" Display function name in status bar:
-let g:ctags_statusline=1
-" Automatically start script
-let generate_tags=1
-" Displays taglist results in a vertical windows:
-let Tlist_Use_Horiz_Window=0
-" Shorter commands to toggle Taglist display
-nnoremap TT :TlistToggle<CR>
-map <F4> :TlistToggle<CR>
-" Various Taglist display config:
-let Tlist_Use_Right_Windows = 1
-let Tlist_Compact_Format = 1
-let Tlist_Exit_OnlyWindow = 1
-let Tlist_GainFocus_On_ToggleOpen = 1
-let Tlist_File_Fold_Auto_Close = 1
-
-""""" Autocommands
-
-"autocmd BufRead *.py set makeprg=python\ -c\ \"import\ py_compile,sys;\ sys.stderr=sys.stdout;\ py_compile.compile(r'%')\"
-"autocmd BufRead *.py set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m 
-
 "" bind ctrl+space for omnicompletion
 inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
 			\ "\<lt>C-n>" :
@@ -363,27 +250,20 @@ inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
 			\ "\" \\<lt>bs>\\<lt>C-n>\"\<CR>"
 imap <C-@> <C-Space>
 
-
-au BufNewFile,BufRead *.yaml,*.yml so ~/.vim/yaml.vim
-
-" sw = shiftwidth: works with the '>' command
-"autocmd FileType python setlocal sw=4 sts=4 et textwidth=78 sta
-
 "custom koichirose
-
 if has("gui_running")
   " GUI is running or is about to start.
   " Maximize gvim window.
   set lines=999 columns=999
   
-"else
-  " This is console Vim.
-  "if exists("+lines")
-  "  set lines=50
-  "endif
-  "if exists("+columns")
-    "set columns=100
-  "endif
+else
+  "This is console Vim.
+  if exists("+lines")
+   set lines=50
+  endif
+  if exists("+columns")
+	set columns=100
+  endif
 endif
 
 if has("autocmd") && has("gui")
