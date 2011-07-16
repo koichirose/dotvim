@@ -147,6 +147,7 @@ map <S-l> :tabn<CR>
 
 nnoremap :ntf :NERDTreeFind<CR>
 nnoremap <leader>, :NERDTreeFind<CR>
+nnoremap :lf :update<CR>:e ++ff=dos<CR>:setlocal ff=unix<CR>:w<CR> 
 
 " Use the arrows to do something useful
 map <right> :bn<cr>

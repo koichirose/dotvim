@@ -40,3 +40,6 @@
 [submodule "bundle/Sparkup"]
 	path = bundle/Sparkup
 	url = https://github.com/kogakure/vim-sparkup.git
+[submodule "vim-rails"]
+	path = vim-rails
+	url = http://github.com/tpope/vim-rails
