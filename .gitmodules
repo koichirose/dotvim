@@ -1,6 +1,6 @@
-[submodule "bundle/bufexplorer"]
-	path = bundle/bufexplorer
-	url = http://github.com/vim-scripts/bufexplorer.zip.git
+;[submodule "bundle/bufexplorer"]
+	;path = bundle/bufexplorer
+	;url = http://github.com/vim-scripts/bufexplorer.zip.git
 ;[submodule "bundle/delimitmate"]
 	;path = bundle/delimitmate
 	;url = http://github.com/Raimondi/delimitMate.git
@@ -10,9 +10,9 @@
 ;[submodule "bundle/Command-t"]
 	;path = bundle/Command-t
 	;url = https://github.com/vim-scripts/Command-T.git
-[submodule "bundle/SuperTab"]
-	path = bundle/SuperTab
-	url = https://github.com/vim-scripts/SuperTab.git
+;[submodule "bundle/SuperTab"]
+	;path = bundle/SuperTab
+	;url = https://github.com/vim-scripts/SuperTab.git
 [submodule "bundle/SnipMate"]
 	path = bundle/SnipMate
 	url = https://github.com/msanders/snipmate.vim.git
@@ -22,9 +22,9 @@
 ;[submodule "bundle/surround"]
 	;path = bundle/surround
 	;url = https://github.com/tpope/vim-surround.git
-[submodule "bundle/HTML-AutoCloseTag"]
-	path = bundle/HTML-AutoCloseTag
-	url = https://github.com/vim-scripts/HTML-AutoCloseTag.git
+;[submodule "bundle/HTML-AutoCloseTag"]
+	;path = bundle/HTML-AutoCloseTag
+	;url = https://github.com/vim-scripts/HTML-AutoCloseTag.git
 [submodule "bundle/NerdTree"]
 	path = bundle/NerdTree
 	url = https://github.com/scrooloose/nerdtree.git
