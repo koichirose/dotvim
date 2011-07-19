@@ -148,10 +148,11 @@ map <S-l> :tabn<CR>
 nnoremap :ntf :NERDTreeFind<CR>
 nnoremap <leader>, :NERDTreeFind<CR>
 nnoremap :lf :update<CR>:e ++ff=dos<CR>:setlocal ff=unix<CR>:w<CR> 
+nnoremap :php :%s/<?php echo base_url();?>/\//g<CR>:%s/<?php echo/<%=/g<CR>:%s/<?php/<%/g<CR>:%s/;?>/ %>/g<CR>:%s/?>/%>/g<CR> 
 
 " Use the arrows to do something useful
-map <right> :bn<cr>
-map <left> :bp<cr>
+"map <right> :bn<cr>
+"map <left> :bp<cr>
 
 " MiniBufExplorer settings
 let g:miniBufExplModSelTarget = 1
