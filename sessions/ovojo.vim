@@ -1,5 +1,5 @@
 " ~/.vim/sessions/ovojo.vim: Vim session script.
-" Created by ~/.vim/bundle/sessions/autoload/session.vim on 19 July 2011 at 14:58:18.
+" Created by ~/.vim/bundle/sessions/autoload/session.vim on 19 July 2011 at 15:09:47.
 " Open this file in Vim and run :source % to restore your session.
 
 set guioptions=aegimrLtT
@@ -272,7 +272,7 @@ badd +30 ~/work/public_html/scripts/light/my_register.js
 badd +11 ~/work/public_html/system/application/views/light/v_recover_password.php
 badd +20 email/v_recover_password.php
 badd +1 email/v_notify_loved_purchase.php
-badd +8 ~/work/public_html/system/application/views/index.html
+badd +10 ~/work/public_html/system/application/views/index.html
 badd +1 helpers/rating_helper.php
 badd +1 v_search_results.php
 badd +1 ~/work/public_html/system/application/views/light/admin/v_footer.php
@@ -459,12 +459,12 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 175 - ((3 * winheight(0) + 24) / 49)
+let s:l = 169 - ((7 * winheight(0) + 24) / 49)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-175
-normal! 077l
+169
+normal! 013l
 lcd ~/work/public_html/system/application/views/light/public
 wincmd w
 argglobal
@@ -478,15 +478,15 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 16 - ((0 * winheight(0) + 24) / 49)
+let s:l = 22 - ((21 * winheight(0) + 24) / 49)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-16
-normal! 04l
+22
+normal! 07l
 lcd ~/work/public_html/system/application/views/light/public
 wincmd w
-2wincmd w
+3wincmd w
 exe 'vert 1resize ' . ((&columns * 31 + 102) / 204)
 exe 'vert 2resize ' . ((&columns * 86 + 102) / 204)
 exe 'vert 3resize ' . ((&columns * 85 + 102) / 204)
@@ -533,7 +533,7 @@ normal! zt
 normal! 06l
 lcd ~/work/public_html/scripts/light
 wincmd w
-2wincmd w
+3wincmd w
 exe 'vert 1resize ' . ((&columns * 38 + 102) / 204)
 exe 'vert 2resize ' . ((&columns * 165 + 102) / 204)
 tabedit ~/work/public_html/css/light/my_profile.css
@@ -579,7 +579,7 @@ normal! zt
 normal! 0
 lcd ~/work/public_html/css/light
 wincmd w
-2wincmd w
+3wincmd w
 exe 'vert 1resize ' . ((&columns * 38 + 102) / 204)
 exe 'vert 2resize ' . ((&columns * 165 + 102) / 204)
 tabnext 4
@@ -626,6 +626,6 @@ bwipeout
 NERDTree ~/work/public_html
 1resize 49|vert 1resize 38|2resize 49|vert 2resize 165|
 tabnext 4
-2wincmd w
+3wincmd w
 
 " vim: ft=vim ro nowrap smc=128
