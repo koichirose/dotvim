@@ -13,9 +13,6 @@
 [submodule "bundle/Nerd-Commenter"]
 	path = bundle/Nerd-Commenter
 	url = https://github.com/vim-scripts/The-NERD-Commenter.git
-[submodule "bundle/css_color"]
-	path = bundle/css_color
-	url = https://github.com/vim-scripts/css_color.vim.git
 [submodule "bundle/AutoClose"]
 	path = bundle/AutoClose
 	url = https://github.com/vim-scripts/AutoClose.git
