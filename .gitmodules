@@ -1,30 +1,12 @@
-;[submodule "bundle/bufexplorer"]
-	;path = bundle/bufexplorer
-	;url = http://github.com/vim-scripts/bufexplorer.zip.git
-;[submodule "bundle/delimitmate"]
-	;path = bundle/delimitmate
-	;url = http://github.com/Raimondi/delimitMate.git
 [submodule "bundle/sparkup"]
 	path = bundle/sparkup
 	url = https://github.com/kogakure/vim-sparkup.git
-;[submodule "bundle/Command-t"]
-	;path = bundle/Command-t
-	;url = https://github.com/vim-scripts/Command-T.git
-;[submodule "bundle/SuperTab"]
-	;path = bundle/SuperTab
-	;url = https://github.com/vim-scripts/SuperTab.git
 [submodule "bundle/SnipMate"]
 	path = bundle/SnipMate
 	url = https://github.com/msanders/snipmate.vim.git
 [submodule "bundle/matchit"]
 	path = bundle/matchit
 	url = https://github.com/mhz/vim-matchit.git
-;[submodule "bundle/surround"]
-	;path = bundle/surround
-	;url = https://github.com/tpope/vim-surround.git
-;[submodule "bundle/HTML-AutoCloseTag"]
-	;path = bundle/HTML-AutoCloseTag
-	;url = https://github.com/vim-scripts/HTML-AutoCloseTag.git
 [submodule "bundle/NerdTree"]
 	path = bundle/NerdTree
 	url = https://github.com/scrooloose/nerdtree.git
@@ -37,12 +19,3 @@
 [submodule "bundle/AutoClose"]
 	path = bundle/AutoClose
 	url = https://github.com/vim-scripts/AutoClose.git
-[submodule "bundle/Sparkup"]
-	path = bundle/Sparkup
-	url = https://github.com/kogakure/vim-sparkup.git
-[submodule "bundle/vim-rails"]
-	path = bundle/vim-rails
-	url = http://github.com/tpope/vim-rails
-[submodule "bundle/vim-latex"]
-	path = bundle/vim-latex
-	url = https://github.com/vim-scripts/LaTeX-Suite-aka-Vim-LaTeX.git
