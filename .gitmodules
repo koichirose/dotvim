@@ -6,7 +6,7 @@
 	url = https://github.com/msanders/snipmate.vim.git
 [submodule "bundle/matchit"]
 	path = bundle/matchit
-	url = https://github.com/mhz/vim-matchit.git
+	url = https://github.com/tsaleh/vim-matchit.git
 [submodule "bundle/NerdTree"]
 	path = bundle/NerdTree
 	url = https://github.com/scrooloose/nerdtree.git
