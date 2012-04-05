@@ -62,6 +62,7 @@ imap <C-v> <ESC>"+p
 map <C-s> :w<cr>
 
 set smartcase " search case sensitive if caps on 
+set smartindent " search case sensitive if caps on 
 set showcmd	" Display what command is waiting for an operator
 
 autocmd BufNewFile,BufRead /*apache* setfiletype apache
@@ -272,7 +273,7 @@ if has("gui_running")
   " GUI is running or is about to start.
   " Maximize gvim window.
   set lines=999 columns=999
-  set guifont=Inconsolata\ Medium\ 12
+  set guifont="Inconsolata Medium 12"
   
 "else
   ""This is console Vim.
