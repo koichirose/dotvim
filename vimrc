@@ -273,7 +273,7 @@ if has("gui_running")
   " GUI is running or is about to start.
   " Maximize gvim window.
   set lines=999 columns=999
-  set guifont="Inconsolata Medium 12"
+  set guifont="Inconsolata:h13"
   
 "else
   ""This is console Vim.
