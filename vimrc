@@ -1,3 +1,5 @@
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+
 set nocompatible "Don't be compatible with vi
 filetype off
 call pathogen#helptags()
@@ -26,7 +28,7 @@ colorscheme molokai
 let mapleader = ","
 let g:mapleader = ","
 let g:sparkupNextMapping = '<c-x>'
-let g:DisableAutoPHPFolding = 1
+let g:DisableAutoPHPFolding = 0
 " Enter key to work like ESC
 " Use Shift-Enter or Ctrl-Enter for the new line
 ":inoremap <CR> <Esc>
@@ -53,6 +55,10 @@ noremap k gk
 
 nmap <tab> %
 vmap <tab> %
+
+"insert backticks (useful for sphinx syntax)
+"vmap <leader>a ``
+"imap <leader>a ``
 
 "copy and paste
 vmap <C-c> "+y
@@ -240,6 +246,8 @@ set completeopt=menuone,menu,longest,preview
 """"" Folding
 "set foldmethod=syntax					" By default, use syntax to determine folds
 set foldlevelstart=99					" All folds open by default
+map ,f :set foldmethod=indent<cr>zM<cr>
+map ,F :set foldmethod=manual<cr>zR<cr>
 
 
 """" Command Line
@@ -273,7 +281,7 @@ if has("gui_running")
   " GUI is running or is about to start.
   " Maximize gvim window.
   set lines=999 columns=999
-  set guifont="Inconsolata:h13"
+  set guifont=Inconsolata:h14
   
 "else
   ""This is console Vim.
