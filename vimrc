@@ -91,6 +91,13 @@ set backupcopy=yes " keep attributes of original file
 set backupskip=/tmp/*,$TMPDIR/*,$TMP/*,$TEMP/*
 set directory=~/.vim/swap,~/tmp,. " keep swp files under ~/.vim/swap
 
+"disable help (use :help)
+nnoremap <F1> <nop>
+"disable ex mode (may be annoying when starting a macro with q and writing Q "instead)
+nnoremap Q <nop>
+"disable man pages
+nnoremap K <nop>
+
 
 set scrolloff=7 "Set 7 lines to the cursors when moving vertical
 set wildmenu "Autocomplete features in the status bar
@@ -102,7 +109,6 @@ set hidden "Change buffer without saving
 set backspace=indent,eol,start
 set whichwrap+=<,>,h,l
 
-set ignorecase "Search is case insensitive
 set hlsearch "Highlight matches to the search 
 set incsearch "Show best match so far
 set magic "Set magic on for regular expressions
