@@ -97,6 +97,8 @@ nnoremap <F1> <nop>
 nnoremap Q <nop>
 "disable man pages
 nnoremap K <nop>
+"since D and C delete and change from the cursor to end of line, make Y behave like that, too
+nnoremap Y y$
 
 
 set scrolloff=7 "Set 7 lines to the cursors when moving vertical
@@ -257,7 +259,7 @@ map ,F :set foldmethod=manual<cr>zR<cr>
 
 
 """" Command Line
-set wildmode=list:longest " stesso di prima, più simile a shell
+set wildmode=list:longest
 
 "" bind ctrl+space for omnicompletion
 inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
