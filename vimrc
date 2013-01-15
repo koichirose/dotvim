@@ -101,6 +101,7 @@ nnoremap K <nop>
 nnoremap Y y$
 
 
+set ignorecase " ignores the case in search/autocompletion
 set scrolloff=7 "Set 7 lines to the cursors when moving vertical
 set wildmenu "Autocomplete features in the status bar
 set ruler "Always show current position
