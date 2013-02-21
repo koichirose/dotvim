@@ -56,6 +56,11 @@ noremap k gk
 nmap <tab> %
 vmap <tab> %
 
+"toggle line numbers
+:nmap \l :setlocal number!<CR>
+"toggle paste mode
+:nmap \o :set paste!<CR>
+
 "insert backticks (useful for sphinx syntax)
 "vmap <leader>a ``
 "imap <leader>a ``
@@ -161,10 +166,9 @@ map  <silent><A-left>  :tabp<CR>
 map <S-h> :tabp<CR>
 map <S-l> :tabn<CR>
 
-nnoremap :ntf :NERDTreeFind<CR>
 nnoremap <leader>, :NERDTreeFind<CR>
 nnoremap :lf :update<CR>:e ++ff=dos<CR>:setlocal ff=unix<CR>:w<CR> 
-nnoremap :php :%s/<?php echo base_url();?>/\//g<CR>:%s/<?php echo/<%=/g<CR>:%s/<?php/<%/g<CR>:%s/;?>/ %>/g<CR>:%s/?>/%>/g<CR> 
+"nnoremap :php :%s/<?php echo base_url();?>/\//g<CR>:%s/<?php echo/<%=/g<CR>:%s/<?php/<%/g<CR>:%s/;?>/ %>/g<CR>:%s/?>/%>/g<CR> 
 
 " Use the arrows to do something useful
 "map <right> :bn<cr>
@@ -340,3 +344,20 @@ function! GuiTabLabel()
 endfunction
 
 set guitablabel=%{GuiTabLabel()}
+
+"vundle!
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'
+
+
+Bundle 'kogakure/vim-sparkup'
+Bundle 'msanders/snipmate.vim'
+Bundle 'scrooloose/nerdtree'
+Bundle 'vim-scripts/The-NERD-Commenter'
+Bundle 'vim-scripts/AutoClose'
+Bundle 'ervandew/supertab'
+Bundle 'tsaleh/vim-matchit'
+Bundle 'kien/ctrlp.vim'
