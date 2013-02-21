@@ -1,9 +1,5 @@
-set runtimepath^=~/.vim/bundle/ctrlp.vim
-
 set nocompatible "Don't be compatible with vi
 filetype off
-call pathogen#helptags()
-call pathogen#runtime_append_all_bundles()
 
 " {{{1 General Settings 
 
@@ -361,3 +357,4 @@ Bundle 'vim-scripts/AutoClose'
 Bundle 'ervandew/supertab'
 Bundle 'tsaleh/vim-matchit'
 Bundle 'kien/ctrlp.vim'
+Bundle 'xolox/vim-session'
