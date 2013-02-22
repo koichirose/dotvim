@@ -1,6 +1,5 @@
 " ******** GENERAL SETTINGS ********
 set nocompatible " Don't be compatible with vi
-filetype off
 filetype plugin indent on " Enable filetype plugin
 
 set t_Co=256 " Explicitly tell Vim that the terminal supports 256 colors
@@ -80,8 +79,8 @@ set tags=tags;/
 " ******** END GENERAL SETTINGS ********
 
 " With a map leader it's possible to do extra key combinations
-let mapleader = " ," 
-let g:mapleader = " ," 
+let mapleader = "," 
+let g:mapleader = "," 
 let g:sparkupNextMapping = '<c-x>'
 let g:DisableAutoPHPFolding = 0
 
