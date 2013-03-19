@@ -138,6 +138,7 @@ map <S-h> :tabp<CR>
 map <S-l> :tabn<CR>
 
 nnoremap <leader>, :NERDTreeFind<CR>
+nnoremap <leader>g :GitGutterLineHighlightsToggle<CR>
 nnoremap :lf :update<CR>:e ++ff=dos<CR>:setlocal ff=unix<CR>:w<CR> 
 
 " Use the arrows to do something useful
@@ -237,3 +238,4 @@ Bundle 'tsaleh/vim-matchit'
 Bundle 'kien/ctrlp.vim'
 Bundle 'xolox/vim-session'
 Bundle 'Lokaltog/vim-powerline'
+Bundle 'airblade/vim-gitgutter'
