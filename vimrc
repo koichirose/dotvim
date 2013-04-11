@@ -139,6 +139,10 @@ map <S-l> :tabn<CR>
 
 nnoremap <leader>, :NERDTreeFind<CR>
 nnoremap <leader>g :GitGutterLineHighlightsToggle<CR>
+"To stop vim-gitgutter running on BufEnter 
+let g:gitgutter_on_bufenter = 0
+"To stop vim-gitgutter running for all visible buffers on FocusGained 
+let g:gitgutter_all_on_focusgained = 0
 nnoremap :lf :update<CR>:e ++ff=dos<CR>:setlocal ff=unix<CR>:w<CR> 
 
 " Use the arrows to do something useful
@@ -239,4 +243,5 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'xolox/vim-session'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'airblade/vim-gitgutter'
+Bundle 'nelstrom/vim-visual-star-search'
 "Bundle 'Valloric/YouCompleteMe'
