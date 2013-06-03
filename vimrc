@@ -143,6 +143,7 @@ nnoremap <leader>g :GitGutterLineHighlightsToggle<CR>
 let g:gitgutter_on_bufenter = 0
 "To stop vim-gitgutter running for all visible buffers on FocusGained 
 let g:gitgutter_all_on_focusgained = 0
+let g:gitgutter_eager = 0
 nnoremap :lf :update<CR>:e ++ff=dos<CR>:setlocal ff=unix<CR>:w<CR> 
 
 " Use the arrows to do something useful
