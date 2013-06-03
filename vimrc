@@ -232,6 +232,7 @@ call vundle#rc()
 " required! 
 Bundle 'gmarik/vundle'
 
+Bundle 'xolox/vim-misc'
 Bundle 'xolox/vim-session'
 Bundle 'kogakure/vim-sparkup'
 Bundle 'msanders/snipmate.vim'
