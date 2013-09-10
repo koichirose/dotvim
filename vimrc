@@ -235,7 +235,7 @@ Bundle 'gmarik/vundle'
 
 Bundle 'xolox/vim-misc'
 Bundle 'xolox/vim-session'
-Bundle 'kogakure/vim-sparkup'
+Bundle 'tristen/vim-sparkup'
 Bundle 'msanders/snipmate.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'vim-scripts/The-NERD-Commenter'
