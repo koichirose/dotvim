@@ -1,6 +1,5 @@
 " ******** GENERAL SETTINGS ********
 set nocompatible " Don't be compatible with vi
-filetype plugin indent on " Enable filetype plugin
 
 set t_Co=256 " Explicitly tell Vim that the terminal supports 256 colors
 
@@ -38,7 +37,9 @@ set noerrorbells
 set novisualbell
 set t_vb=
 
-syntax enable " Enable syntax hl
+"fix for detecting LESS files
+"filetype off
+"filetype on
 
 set tabstop=4 " 4 spaces as a tab for bs/del
 set shiftwidth=4 " sw 4 spaces (used on auto indent)
@@ -54,10 +55,10 @@ set autoindent " Auto indent
 set nobackup " do not keep backups after close
 set nowritebackup " do not keep a backup while working
 set noswapfile " don't keep swp files either
-set backupdir=~/.vim/backup " store backups under ~/.vim/backup
-set backupcopy=yes " keep attributes of original file
-set backupskip=/tmp/*,$TMPDIR/*,$TMP/*,$TEMP/*
-set directory=~/.vim/swap,~/tmp,. " keep swp files under ~/.vim/swap
+"set backupdir=~/.vim/backup " store backups under ~/.vim/backup
+"set backupcopy=yes " keep attributes of original file
+"set backupskip=/tmp/*,$TMPDIR/*,$TMP/*,$TEMP/*
+"set directory=~/.vim/swap,~/tmp,. " keep swp files under ~/.vim/swap
 
 " Always show the statusline
 set laststatus=2
@@ -82,6 +83,7 @@ set tags=tags;/
 let mapleader = "," 
 let g:mapleader = "," 
 let g:sparkupNextMapping = '<c-x>'
+let g:sparkupDoubleQuote = 1
 let g:DisableAutoPHPFolding = 0
 
 " Fast editing of the .vimrc in a new tab
@@ -174,7 +176,7 @@ map ,F :set foldmethod=manual<cr>zR<cr>
 " Command Line
 set wildmode=list:longest
 
-set guifont=Inconsolata:h14
+set guifont=Inconsolata:h15
 " custom koichirose
 if has(" gui_running" )
   " GUI is running or is about to start.
@@ -245,5 +247,8 @@ Bundle 'tsaleh/vim-matchit'
 Bundle 'kien/ctrlp.vim'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'Lokaltog/vim-powerline'
+Bundle 'groenewege/vim-less'
 "Bundle 'myusuf3/numbers.vim'
-"Bundle 'lunaru/vim-less'
+
+syntax on " Enable syntax hl
+filetype plugin indent on " Enable filetype plugin
