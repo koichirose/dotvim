@@ -2,6 +2,7 @@
 set nocompatible " Don't be compatible with vi
 
 set t_Co=256 " Explicitly tell Vim that the terminal supports 256 colors
+set term=screen-256color
 
 set encoding=utf-8
 set showmode
