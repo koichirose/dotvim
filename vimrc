@@ -229,6 +229,9 @@ endfunction
 
 set guitablabel=%{GuiTabLabel()}
 
+"YouCompleteMe default key for completion
+let g:ycm_key_list_select_completion = ['<Enter>', '<Down>']
+
 " vundle!
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -243,7 +246,7 @@ Bundle 'msanders/snipmate.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'vim-scripts/The-NERD-Commenter'
 Bundle 'vim-scripts/AutoClose'
-Bundle 'ervandew/supertab'
+"Bundle 'ervandew/supertab'
 "Bundle 'tsaleh/vim-matchit'
 Bundle 'tmhedberg/matchit'
 Bundle 'kien/ctrlp.vim'
