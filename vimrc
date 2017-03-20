@@ -10,6 +10,7 @@ set ignorecase " ignores the case in search/autocompletion
 set smartcase " search case sensitive if caps on 
 set smartindent
 set showcmd " Display what command is waiting for an operator
+set cursorline
 
 set background=dark						
 set number " Show line numbering
@@ -60,6 +61,8 @@ set noswapfile " don't keep swp files either
 "set backupcopy=yes " keep attributes of original file
 "set backupskip=/tmp/*,$TMPDIR/*,$TMP/*,$TEMP/*
 "set directory=~/.vim/swap,~/tmp,. " keep swp files under ~/.vim/swap
+
+set lazyredraw          " redraw only when we need to.
 
 " Always show the statusline
 set laststatus=2
@@ -249,7 +252,7 @@ Bundle 'vim-scripts/AutoClose'
 "Bundle 'ervandew/supertab'
 "Bundle 'tsaleh/vim-matchit'
 Bundle 'tmhedberg/matchit'
-Bundle 'kien/ctrlp.vim'
+Bundle 'ctrlpvim/ctrlp.vim'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'groenewege/vim-less'
