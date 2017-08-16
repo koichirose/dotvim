@@ -257,7 +257,8 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'groenewege/vim-less'
 Bundle 'Valloric/YouCompleteMe'
-Bundle 'luochen1990/indent-detector.vim'
+Bundle 'tpope/vim-sleuth'
+"Bundle 'luochen1990/indent-detector.vim'
 "Bundle 'myusuf3/numbers.vim'
 
 syntax on " Enable syntax hl
