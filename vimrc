@@ -250,7 +250,6 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'vim-scripts/The-NERD-Commenter'
 Bundle 'vim-scripts/AutoClose'
 "Bundle 'ervandew/supertab'
-"Bundle 'tsaleh/vim-matchit'
 Bundle 'tmhedberg/matchit'
 Bundle 'ctrlpvim/ctrlp.vim'
 Bundle 'airblade/vim-gitgutter'
@@ -258,8 +257,8 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'groenewege/vim-less'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'tpope/vim-sleuth'
-"Bundle 'luochen1990/indent-detector.vim'
-"Bundle 'myusuf3/numbers.vim'
+Bundle 'tpope/vim-surround'
+Bundle 'posva/vim-vue'
 
 syntax on " Enable syntax hl
 filetype plugin indent on " Enable filetype plugin
