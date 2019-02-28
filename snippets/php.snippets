@@ -4,46 +4,14 @@ snippet bec
 	{{ ${1} }}
 snippet dd
 	dd(${1});
-snippet esc
-= $this->db->escape_str(${1});
 snippet php
 	<?php
 	${1}
+	?>
 snippet dst "declare(strict_types=1)"
 	declare(strict_types=${1:1});
 snippet ec
 	echo ${0};
-snippet <?e
-	<?php echo ${0} ?>
-# this one is for php5.4
-snippet <?=
-	<?=${0}?>
-snippet ?=
-	<?= ${0} ?>
-snippet ?
-	<?php ${0} ?>
-snippet ?f
-	<?php foreach ($${1:vars} as $${2:$var}): ?>
-		${0:${VISUAL}}
-	<?php endforeach ?>
-snippet ?i
-	<?php if ($${1:var}): ?>
-		${0:${VISUAL}}
-	<?php endif ?>
-snippet ns
-	namespace ${1:Foo\Bar\Baz};
-	
-	${0:${VISUAL}}
-snippet c
-	class ${1:`vim_snippets#Filename()`}
-	{
-		${0:${VISUAL}}
-	}
-snippet i
-	interface ${1:`vim_snippets#Filename()`}
-	{
-		${0:${VISUAL}}
-	}
 snippet t.
 	$this->
 snippet f
