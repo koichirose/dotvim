@@ -103,7 +103,7 @@ vmap <tab> %
 " toggle line numbers
 :nmap \l :setlocal number!<CR>
 " toggle paste mode
-:nmap \o :set paste!<CR>
+:nmap `o :set paste!<CR>
 
 " insert backticks (useful for sphinx syntax)
 " vmap <leader>a ``
@@ -143,6 +143,7 @@ map <C-l> <C-W>l
 map <S-h> :tabp<CR>
 map <S-l> :tabn<CR>
 
+let NERDTreeShowHidden=1
 nnoremap <leader>, :NERDTreeFind<CR>
 nnoremap <leader>g :GitGutterLineHighlightsToggle<CR>
 "To stop vim-gitgutter running on BufEnter 
