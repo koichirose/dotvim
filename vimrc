@@ -235,6 +235,8 @@ set guitablabel=%{GuiTabLabel()}
 
 "YouCompleteMe default key for completion
 let g:ycm_key_list_select_completion = ['<Enter>', '<Down>']
+nnoremap <leader>j :%!python3 -m json.tool %<CR>
+command! JsonBeautify :execute '%!python3 -m json.tool'
 
 " vundle!
 set rtp+=~/.vim/bundle/vundle/
@@ -258,10 +260,12 @@ Bundle 'ctrlpvim/ctrlp.vim'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'groenewege/vim-less'
-Bundle 'Valloric/YouCompleteMe'
+"Bundle 'Valloric/YouCompleteMe'
 Bundle 'tpope/vim-sleuth'
 Bundle 'tpope/vim-surround'
-Bundle 'posva/vim-vue'
+"Bundle 'posva/vim-vue'
 
 syntax on " Enable syntax hl
 filetype plugin indent on " Enable filetype plugin
+let g:snipMate = { 'snippet_version' : 0 }
+:let g:session_autoload = 'no'
